@@ -1,0 +1,56 @@
+/* Board Styles */
+#board {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+  width: 300px;
+  margin: 0 auto;
+}
+
+/* Cell Styles */
+.cell {
+  background-color: #f0f0f0;
+  border: 2px solid #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2em;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.cell:hover {
+  background-color: #e0e0e0;
+}
+
+/* X and O Styles */
+.x {
+  color: #ff5555;
+}
+
+.o {
+  color: #5588ff;
+}
+
+/* Winning Combination Styles */
+.win {
+  background-color: #ffff00;
+  animation: winAnimation 1s infinite alternate;
+}
+
+@keyframes winAnimation {
+  from {
+    background-color: #ffff00;
+  }
+  to {
+    background-color: #ff00ff;
+  }
+}
+
+/* Message Styles */
+#message {
+  font-size: 1.5em;
+  text-align: center;
+  margin-top: 20px;
+  color: #333;
+}
